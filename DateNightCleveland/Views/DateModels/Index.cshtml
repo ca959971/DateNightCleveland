@@ -1,0 +1,44 @@
+﻿@model IEnumerable<DateNightCleveland.Models.DateModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+
+
+<div class="container">
+    @foreach (var item in Model)
+    {
+
+
+
+        <div class="col-sm-6 col-md-4">
+            <div class="row">
+                <div class="thumbnail">
+                    <img src="@Html.DisplayFor(modelItem =>item.Photo)" class="img-rounded" alt="Cinque Terre" width="304" height="236">
+                    <div class="caption">
+
+                        <p>Title: @Html.DisplayFor(modelItem => item.Title)</p>
+                        <p>Type: @Html.DisplayFor(modelItem => item.DateType)</p>
+                        <p>Address: @Html.DisplayFor(modelItem => item.Address)</p>
+                        <p>Phone#: @Html.DisplayFor(modelItem => item.PhoneNum)</p>
+                        <p><a href=@Html.DisplayFor(modelItem => item.Website)>Website</a></p>
+                        <p>Price: $@Html.DisplayFor(modelItem => item.PricePerPerson)</p>
+                        <p>
+
+
+
+                        </p>
+                        @*<p class="btn btn-default" role="button">@Html.ActionLink("Edit", "Edit", new { id = item.RecordNum })</p>
+                             <p class="btn btn-default" role="button"> @Html.ActionLink("Details", "Details", new { id = item.RecordNum }) </p>
+                            <p class="btn btn-default" role="button"> @Html.ActionLink("Delete", "Delete", new { id = item.RecordNum }) </p>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    }
+</div>

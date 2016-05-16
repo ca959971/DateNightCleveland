@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            
+            <h2>
+                <img src="http://goo.gl/QIJ8eR" style="height:30px; width:30px" />
+                <img src="http://goo.gl/QIJ8eR" style="height:30px; width:30px" />
+                <img src="http://goo.gl/QIJ8eR" style="height:30px; width:30px" />
+                <a href="@Url.Action("Index", "DateModels")" class="elements"><span>Date Night Cleveland</span></a>
+                <img src="http://goo.gl/QIJ8eR" style="height:30px; width:30px" />
+                <img src="http://goo.gl/QIJ8eR" style="height:30px; width:30px" />
+                <img src="http://goo.gl/QIJ8eR" style="height:30px; width:30px" />
+            </h2>
+        </div>
+        <div>
+            <h2>
+                <a href="@Url.Action("Dinner","DateModels")">Dinner</a>
+                <a href="@Url.Action("Indoor","DateModels")">Indoors</a>
+                <a href="@Url.Action("Outdoors","DateModels")">Outdoors</a>
+            </h2>
+        </div>
+    </nav>
+
+    
+        @RenderBody()
+     
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
